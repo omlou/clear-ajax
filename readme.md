@@ -48,10 +48,10 @@ arguments：
 
 |参数名|是否必选|默认值|类型|解释|
 |----|----|----|----|----|
-|method|否|"get"|string|请求类型|
+|method|否|"get"|string|请求类型，值不区分大小写|
 |headers|否|系统默认|object|请求头参数|
 |url|是||string|请求地址|
-|params|否||object|地址栏参数（query string）|
+|params|否||object|会转换为地址栏参数（query string）|
 |data|否||object|body 体参数|
 |uploadProgress|否||(e:object)=>any|监听上传文件的进度|
 |downloadProgress|否||(e:object)=>any|监听下载文件的进度|
