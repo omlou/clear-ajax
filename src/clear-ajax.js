@@ -14,6 +14,7 @@
 	function getUrlParam(url,data){ // 处理参数字符串
 		if(!data){return ""}
 		var paramsstr=data instanceof Object ? getQueryString(data) : data
+		if(!paramsstr)return ""
 		return (url.indexOf('?')!==-1)?'&'+paramsstr:'?'+paramsstr
 	}
 	function getPostParam(data){ // 处理post请求参数
@@ -25,10 +26,8 @@
 	}
 	function getQueryString(data){ // 将参数对象转换为参数字符串
 		let paramsarr=[]
-		if (data instanceof Object) {
-			for(let i in data){
-				paramsarr.push(encodeURIComponent(i)+'='+encodeURIComponent(data[i]))
-			}
+		for(let i in data){
+			paramsarr.push(encodeURIComponent(i)+'='+encodeURIComponent(data[i]))
 		}
 		return paramsarr.join('&')
 	}

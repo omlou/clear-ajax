@@ -1,6 +1,6 @@
 {
   "name": "clear-ajax",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/clear-ajax.min.js",
   "types": "./index.d.ts",
   "keywords": [
@@ -17,7 +17,7 @@
     "build": "gulp",
     "commit": "npm publish --access public"
   },
-  "author": "徐孝楼",
+  "author": "Louis Xu",
   "devDependencies": {
     "del": "^6.0.0",
     "gulp": "^4.0.2",
